@@ -262,9 +262,7 @@
                 </button>
 </div>
 </form>
-<div id="success-message" class="hidden mt-4 text-center text-green-500">
-  <p>Your message has been sent successfully. Thank you!</p>
-</div>
+
 </div>
 </section>
 </div>
@@ -346,10 +344,7 @@ contactForm.addEventListener('submit', function(event) {
     .then(response => {
         if (response.ok) {
             contactForm.reset();
-            successMessage.classList.remove('hidden');
-            setTimeout(() => {
-                successMessage.classList.add('hidden');
-            }, 5000);
+            alert('Your message has been sent successfully. Thank you!');
         } else {
             response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
