@@ -60,8 +60,19 @@
 <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 18a1 1 0 011-1v-1a1 1 0 11-2 0v1a1 1 0 011 1zM5.05 14.464L4.343 13.757a1 1 0 10-1.414 1.414l.707.707a1 1 0 001.414-1.414zM14.95 5.536l.707-.707a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414zM4.95 5.536L4.243 4.828a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414z"></path></svg>
 </button>
+<button class="md:hidden flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30" id="mobile-menu-button">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+</button>
 </div>
 </header>
+<div class="md:hidden" id="mobile-menu">
+<nav class="flex flex-col gap-4 px-4 py-2">
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#about">About</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#skills">Skills</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#projects">Projects</a>
+<a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#contact">Contact</a>
+</nav>
+</div>
 <main class="flex-1">
 <section class="relative flex min-h-[60vh] items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
 <div class="absolute inset-0 bg-cover bg-center" style='background-image: linear-gradient(to top, rgba(16, 25, 34, 1) 0%, rgba(16, 25, 34, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBA9bTmw8PTMXTtUq-zVOlPsj_s-4PWkIRiZB5Z2pq0NHI-PpD7USu9LnJs5CIHhyCvtRduK0lj2l5EkP6Up6I1Aw88VueHPD2-_xHhs33GAMMoKs7z-ZLrf7LeJXj3S7qE3o048fPrufgKsKzHSLEI33a749fUeUVtgr5zueKHccZSuW1zjXd_0no4iTo0cU0-cq0Lna74f32-0REky6X_Av_jxA_8AiiwQx_uUtHYfxNui0TFUvIl9TBYDRQ5UntPOkVZ75ZPxrsv");'></div>
@@ -84,7 +95,7 @@
                   Reuben Kgobe, a systems and applications developer with a profound passion for creating innovative and efficient solutions. My journey into the world of technology is built upon a solid educational foundation and an insatiable curiosity for what's possible.
                 </p>
 <div class="flex justify-center mb-8">
-<div class="w-48 h-48 rounded-full bg-cover bg-center ring-4 ring-primary/50" style='background-image: url("images/Profile_Pic.jpeg");'></div>
+<div class="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-cover bg-center ring-4 ring-primary/50" style='background-image: url("images/Profile_Pic.jpeg");'></div>
 </div>
 <div class="p-6 rounded-lg bg-gray-100/50 dark:bg-gray-800/20 border border-gray-200 dark:border-gray-800/50">
 <h3 class="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-4">My Educational Journey</h3>
@@ -349,5 +360,20 @@ contactForm.addEventListener('submit', function(event) {
         alert('Oops! There was a problem submitting your form');
     });
 });
+
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenu) {
+    mobileMenu.classList.add('hidden'); // Initially hide the menu
+}
+
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', function() {
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('hidden');
+        }
+    });
+};
 </script>
 </body></html>
