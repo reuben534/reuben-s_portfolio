@@ -3,9 +3,14 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Reuben Kgobe - Portfolio</title>
+<meta content="Portfolio of Reuben Kgobe, a full-stack developer specializing in MERN and ASP.NET Core MVC, showcasing skills, projects, and contact information." name="description"/>
+<meta content="Reuben Kgobe - Portfolio" property="og:title"/>
+<meta content="Portfolio of Reuben Kgobe, a full-stack developer specializing in MERN and ASP.NET Core MVC." property="og:description"/>
+<meta content="website" property="og:type"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -53,16 +58,16 @@
 </nav>
 <div class="flex items-center gap-2">
 
-<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30" href="https://www.linkedin.com/in/reuben-kgobe-aa10742a1/">
+<a aria-label="Visit Reuben Kgobe on LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30" href="https://www.linkedin.com/in/reuben-kgobe-aa10742a1/" rel="noopener noreferrer" target="_blank">
 <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
 <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
 </svg>
 </a>
-<button id="theme-toggle" class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30">
+<button aria-label="Toggle dark mode" id="theme-toggle" class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30">
 <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
 <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 18a1 1 0 011-1v-1a1 1 0 11-2 0v1a1 1 0 011 1zM5.05 14.464L4.343 13.757a1 1 0 10-1.414 1.414l.707.707a1 1 0 001.414-1.414zM14.95 5.536l.707-.707a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414zM4.95 5.536L4.243 4.828a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414-1.414z"></path></svg>
 </button>
-<button class="md:hidden flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30" id="mobile-menu-button">
+<button aria-label="Toggle mobile menu" class="md:hidden flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-gray-700 hover:bg-primary/20 dark:bg-primary/20 dark:text-white dark:hover:bg-primary/30" id="mobile-menu-button">
 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
 </button>
 </div>
@@ -82,7 +87,7 @@
 <h1 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Reuben Kgobe</h1>
 <p class="mt-4 text-lg text-gray-300 sm:text-xl">Full-Stack Developer | MERN &amp; ASP.NET Core MVC</p>
 <div class="mt-8">
-<a class="inline-block rounded-lg bg-primary px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" href="#projects">View Projects</a>
+<a class="btn-primary inline-block rounded-lg bg-primary px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" href="#projects">View Projects</a>
 </div>
 </div>
 </section>
@@ -102,7 +107,7 @@
 <div class="p-6 rounded-lg bg-gray-100/50 dark:bg-gray-800/20 border border-gray-200 dark:border-gray-800/50">
 <h3 class="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-4">My Educational Journey</h3>
 <ol class="relative border-l border-primary/50 dark:border-primary/50 space-y-8">
-<li class="ml-6">
+<li class="timeline-item ml-6">
 <span class="absolute flex items-center justify-center w-6 h-6 bg-primary/20 rounded-full -left-3 ring-8 ring-background-light dark:ring-background-dark">
 <svg aria-hidden="true" class="w-2.5 h-2.5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z"></path>
@@ -116,7 +121,7 @@
 <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">Busy With</time>
 <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Rosebank College</p>
 </li>
-<li class="ml-6">
+<li class="timeline-item ml-6">
 <span class="absolute flex items-center justify-center w-6 h-6 bg-primary/20 rounded-full -left-3 ring-8 ring-background-light dark:ring-background-dark">
 <svg aria-hidden="true" class="w-2.5 h-2.5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z"></path>
@@ -137,7 +142,7 @@
                 </p>
 </div>
 <div class="mt-12 text-center">
-<a class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" href="#contact">
+<a class="btn-primary inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" href="#contact">
                   Let's Connect
                 </a>
 </div>
@@ -145,7 +150,7 @@
 </section>
 <section class="mt-16 scroll-mt-20" id="skills">
 <div class="mx-auto max-w-4xl">
-<h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">My Skills</h1>
+<h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">My Skills</h2>
 <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">A showcase of my technical abilities across various domains, from development to deployment and security.</p>
 <div class="mt-12 space-y-12">
 <section>
@@ -154,11 +159,11 @@
                   Full-Stack Development
                 </h2>
 <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">MERN Stack</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Building dynamic and responsive web applications with MongoDB, Express.js, React, and Node.js.</p>
 </div>
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">ASP.NET Core MVC</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Developing robust, scalable, and secure web applications using Microsoft's powerful framework.</p>
 </div>
@@ -170,15 +175,15 @@
                   Security Tools
                 </h2>
 <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">MobSF</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Automated mobile application security testing framework for Android &amp; iOS.</p>
 </div>
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">ScoutSuite</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Multi-cloud security auditing tool to assess cloud security posture.</p>
 </div>
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">SonarQube</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Continuous code quality and security analysis for static code analysis.</p>
 </div>
@@ -190,11 +195,11 @@
                   DevOps &amp; Cloud
                 </h2>
 <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Azure Deployment</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Proficient in deploying and managing applications on the Azure cloud platform.</p>
 </div>
-<div class="group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
+<div class="skill-card group flex flex-col gap-4 rounded-lg border border-gray-200/50 bg-white/50 p-6 shadow-sm transition-all hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:hover:border-primary/50 dark:hover:bg-gray-800">
 <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">CI/CD Pipelines</h3>
 <p class="text-sm text-gray-600 dark:text-gray-400">Implementing automated build, test, and deployment pipelines for efficient workflows.</p>
 </div>
@@ -210,28 +215,28 @@
 <section class="mt-16 scroll-mt-20" id="projects">
 <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Projects</h2>
 <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-<div class="group flex flex-col overflow-hidden rounded-lg border border-gray-200/50 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700/50 dark:bg-background-dark/50">
-<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("images/International_Payment_Portal.PNG");'></div>
+<div class="project-card group flex flex-col overflow-hidden rounded-lg border border-gray-200/50 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700/50 dark:bg-background-dark/50">
+<div class="project-image aspect-video w-full bg-cover bg-center" style='background-image: url("images/International_Payment_Portal.PNG");'></div>
 <div class="p-4">
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">International Payment Portal</h3>
-<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">application created using merns stack</p>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Application built with the MERN stack.</p>
 <div class="mt-4">
-<a class="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" href="https://youtu.be/2wTqomChTEM" target="_blank">View Demo</a>
+<a class="btn-primary inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" href="https://youtu.be/2wTqomChTEM" rel="noopener noreferrer" target="_blank">View Demo</a>
 </div>
 </div>
 </div>
-<div class="group flex flex-col overflow-hidden rounded-lg border border-gray-200/50 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700/50 dark:bg-background-dark/50">
-<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("images/EvenEase.PNG");'></div>
+<div class="project-card group flex flex-col overflow-hidden rounded-lg border border-gray-200/50 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700/50 dark:bg-background-dark/50">
+<div class="project-image aspect-video w-full bg-cover bg-center" style='background-image: url("images/EvenEase.PNG");'></div>
 <div class="p-4">
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">EventEase App</h3>
-<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">application created using asp.net core mvc</p>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Application built with ASP.NET Core MVC.</p>
 <div class="mt-4">
-<a class="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" href="https://youtu.be/Ebp0L9I9lhk" target="_blank">View Demo</a>
+<a class="btn-primary inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark" href="https://youtu.be/Ebp0L9I9lhk" rel="noopener noreferrer" target="_blank">View Demo</a>
 </div>
 </div>
 </div>
-<div class="group flex flex-col overflow-hidden rounded-lg border border-gray-200/50 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700/50 dark:bg-background-dark/50">
-<div class="aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIMVLA6IiqtdsdQx7mLWw3aN2g8sXL3_AdNXqCoNd379dnagwVjoy33qUNcgAV0oQrI1anPV2eOJ2s_fJMCKzuHp9IdcX5-Aab6sHe3R3qI5Zvh9J6ZIhyip-PNCTPN0B-hkyKHY66CGd4BPwBOjjzyRDPIwqg02QI3P931uQ--75L-Sd--3GUvJAJTSUToBKqMjONcpZLDXeCK1BlAELnjdPUN_2UlqHiihiVwp3WHWEyEYlPDN87OjCazgqK5NTSySBRBbLye9Wc");'></div>
+<div class="project-card group flex flex-col overflow-hidden rounded-lg border border-gray-200/50 bg-background-light shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700/50 dark:bg-background-dark/50">
+<div class="project-image aspect-video w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIMVLA6IiqtdsdQx7mLWw3aN2g8sXL3_AdNXqCoNd379dnagwVjoy33qUNcgAV0oQrI1anPV2eOJ2s_fJMCKzuHp9IdcX5-Aab6sHe3R3qI5Zvh9J6ZIhyip-PNCTPN0B-hkyKHY66CGd4BPwBOjjzyRDPIwqg02QI3P931uQ--75L-Sd--3GUvJAJTSUToBKqMjONcpZLDXeCK1BlAELnjdPUN_2UlqHiihiVwp3WHWEyEYlPDN87OjCazgqK5NTSySBRBbLye9Wc");'></div>
 <div class="p-4">
 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Inventory Management</h3>
 <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Coming soon</p>
@@ -242,16 +247,16 @@
 <section class="mt-16 scroll-mt-20" id="contact">
 <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
 <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Contact Me</h2>
-<p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Let's build something amazing together! Whether you have a question, a project idea, or just want to say hello, my inbox is always open. Fill out the form below or give me a call at <span class="text-primary">061 4893 124</span>.</p>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Let's build something great together. Whether you have a question, a project idea, or want to connect, my inbox is always open. Fill out the form below or call me at <span class="text-primary">061 489 3124</span>.</p>
 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mt-12 space-y-6">
 <input type="hidden" name="access_key" value="66c48468-fd9d-43fa-be31-6c8c0de4c60a">
 <div>
 <label class="mb-2 block text-sm font-medium text-black/80 dark:text-white/80" for="name">Name</label>
-<input class="form-input block w-full rounded-lg border-white/10 bg-black/5 p-3 text-black transition focus:border-primary focus:ring-primary dark:bg-white/5 dark:text-white" id="name" name="name" placeholder="Your Name" required/>
+<input autocomplete="name" class="form-input block w-full rounded-lg border-white/10 bg-black/5 p-3 text-black transition focus:border-primary focus:ring-primary dark:bg-white/5 dark:text-white" id="name" name="name" placeholder="Your Name" required/>
 </div>
 <div>
 <label class="mb-2 block text-sm font-medium text-black/80 dark:text-white/80" for="email">Email</label>
-<input class="form-input block w-full rounded-lg border-white/10 bg-black/5 p-3 text-black transition focus:border-primary focus:ring-primary dark:bg-white/5 dark:text-white" id="email" name="email" placeholder="Your Email" type="email" required/>
+<input autocomplete="email" class="form-input block w-full rounded-lg border-white/10 bg-black/5 p-3 text-black transition focus:border-primary focus:ring-primary dark:bg-white/5 dark:text-white" id="email" name="email" placeholder="Your Email" type="email" required/>
 </div>
 <div>
 <label class="mb-2 block text-sm font-medium text-black/80 dark:text-white/80" for="subject">Subject</label>
@@ -262,7 +267,7 @@
 <textarea class="form-textarea block w-full rounded-lg border-white/10 bg-black/5 p-3 text-black transition focus:border-primary focus:ring-primary dark:bg-white/5 dark:text-white" id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
 </div>
 <div class="flex justify-end">
-<button class="rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark flex items-center gap-2" type="submit">
+<button class="btn-primary rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark flex items-center gap-2" type="submit">
                   Send Message
                   <i class="fas fa-paper-plane"></i>
                 </button>

@@ -163,9 +163,12 @@ function initMobileMenu() {
   }
 
   if (mobileMenuButton) {
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
     mobileMenuButton.addEventListener('click', function() {
       if (mobileMenu) {
         mobileMenu.classList.toggle('hidden');
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
       }
     });
   }
@@ -176,6 +179,9 @@ function initMobileMenu() {
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+        if (mobileMenuButton) {
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
       });
     });
   }
