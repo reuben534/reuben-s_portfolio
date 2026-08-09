@@ -13,7 +13,7 @@ export default function AboutSection({ educationTimeline }) {
         <div className="space-y-6 text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           <p>Hi, I'm Reuben. I enjoy taking problems that start as ideas and turning them into working web applications. My background includes projects like payment portals, event management solutions, and a growing ecommerce site, and I get the most satisfaction from code that is both useful and easy to maintain.</p>
           <div className="flex justify-center mb-8">
-            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-cover bg-center ring-4 ring-primary/50 profile-pic" style={{ backgroundImage: 'url("/images/Profile_Pic.jpeg")' }}></div>
+            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full bg-cover bg-center ring-4 ring-primary/50 profile-pic" style={{ backgroundImage: `url("${import.meta.env.BASE_URL}images/Profile_Pic.jpeg")` }}></div>
           </div>
           <EducationTimeline educationTimeline={educationTimeline} />
           <p>I studied applications development and systems development, and I apply that foundation to build software with purpose. I enjoy working with React, ASP.NET Core, Node.js, and Azure, and I like when my projects improve business processes or make someone’s day a little easier.</p>

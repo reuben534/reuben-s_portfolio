@@ -1,3 +1,5 @@
+const baseUrl = import.meta.env.BASE_URL;
+
 export const educationTimeline = [
   {
     title: 'Advanced Diploma in Applications Development',
@@ -19,14 +21,14 @@ export const projects = [
   {
     title: 'International Payment Portal',
     description: 'Application built with the MERN stack.',
-    image: '/images/International_Payment_Portal.PNG',
+    image: `${baseUrl}images/International_Payment_Portal.PNG`,
     link: 'https://youtu.be/2wTqomChTEM',
     cta: 'View Demo',
   },
   {
     title: 'EventEase App',
     description: 'Application built with ASP.NET Core MVC.',
-    image: '/images/EvenEase.PNG',
+    image: `${baseUrl}images/EvenEase.PNG`,
     link: 'https://youtu.be/Ebp0L9I9lhk',
     cta: 'View Demo',
   },
