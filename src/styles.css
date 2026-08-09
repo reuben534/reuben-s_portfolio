@@ -1,12 +1,30 @@
 /* Core typography and base rendering */
 :root {
-  --surface-light: #ffffff;
-  --surface-dark: #121a23;
-  --text-muted-light: #4b5563;
-  --text-muted-dark: #9ca3af;
-  --border-light: rgba(15, 23, 42, 0.08);
-  --border-dark: rgba(148, 163, 184, 0.22);
-  --ring: rgba(17, 115, 212, 0.35);
+  --bg: #f6f8ff;
+  --bg-soft: #ffffff;
+  --bg-surface: rgba(255, 255, 255, 0.82);
+  --bg-strong: #ffffff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+  --primary: #1173d4;
+  --primary-strong: #0f61c8;
+  --shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+  --ring: rgba(17, 115, 212, 0.18);
+}
+
+.dark {
+  --bg: #070b16;
+  --bg-soft: rgba(15, 23, 42, 0.88);
+  --bg-surface: rgba(15, 23, 42, 0.92);
+  --bg-strong: #111827;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(148, 163, 184, 0.16);
+  --primary: #4f8cff;
+  --primary-strong: #2a6ce6;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.32);
+  --ring: rgba(79, 140, 255, 0.15);
 }
 
 html {
@@ -16,9 +34,12 @@ html {
 body {
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  background: radial-gradient(circle at top left, rgba(17, 115, 212, 0.16), transparent 28%), radial-gradient(circle at bottom right, rgba(79, 140, 255, 0.14), transparent 25%), var(--bg);
+  color: var(--text);
 }
 
 ::selection {
@@ -26,8 +47,15 @@ body {
 }
 
 header {
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+}
+
+.dark header {
+  background: rgba(7, 11, 22, 0.92);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* Navigation underline (clean and subtle) */
@@ -59,38 +87,47 @@ nav a:hover::after {
 /* Professional card system */
 .project-card,
 .skill-card {
-  border-radius: 0.85rem;
-  border: 1px solid var(--border-light);
-  background: color-mix(in srgb, var(--surface-light) 88%, transparent);
-  box-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+  backdrop-filter: blur(16px);
 }
 
 .dark .project-card,
 .dark .skill-card {
-  border: 1px solid var(--border-dark);
-  background: color-mix(in srgb, var(--surface-dark) 90%, transparent);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  border-color: rgba(148, 163, 184, 0.14);
+  background: var(--bg-soft);
 }
 
 .project-card:hover,
 .skill-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(17, 115, 212, 0.38);
-  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.12);
-}
-
-.dark .project-card:hover,
-.dark .skill-card:hover {
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
+  transform: translateY(-6px);
+  border-color: rgba(17, 115, 212, 0.45);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
 }
 
 .project-image {
-  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 .project-card:hover .project-image {
-  transform: scale(1.04);
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.section-surface {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: var(--bg-surface);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 32px 90px rgba(15, 23, 42, 0.08);
+}
+
+.dark .section-surface {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.86);
 }
 
 /* Timeline */
@@ -118,17 +155,24 @@ nav a:hover::after {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(17, 115, 212, 0.2);
 }
 
 .btn-primary::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
   opacity: 0;
   transform: translateX(-40%);
   transition: opacity 0.2s ease, transform 0.35s ease;
   z-index: -1;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
 }
 
 .btn-primary:hover::before {
