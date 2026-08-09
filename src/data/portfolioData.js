@@ -31,6 +31,13 @@ export const projects = [
     cta: 'View Demo',
   },
   {
+    title: 'Ecommerce Website',
+    description: 'Coming soon',
+    image: 'https://via.placeholder.com/640x360?text=Ecommerce+Website',
+    link: null,
+    cta: null,
+  },
+  {
     title: 'Inventory Management',
     description: 'Coming soon',
     image:

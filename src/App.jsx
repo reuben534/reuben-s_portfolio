@@ -78,7 +78,7 @@ function App() {
               <SectionSummary
                 title="Skills"
                 subtitle="What I build"
-                description="A modern tech stack focused on web apps, APIs, security tooling, and cloud delivery."
+                description="Practical web and API solutions built for real teams, reliable workflows, and measurable business outcomes."
               >
                 <SkillsPanel skillsSections={skillsSections} technologies={technologies} />
               </SectionSummary>

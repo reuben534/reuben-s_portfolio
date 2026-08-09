@@ -9,7 +9,7 @@ export default function SectionCard({ section }) {
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1">
         {section.skills.map((skill) => (
-          <div key={skill.title} className="skill-card group flex flex-col gap-4 rounded-3xl border border-gray-200/50 bg-white p-6 shadow-sm transition-all hover:shadow-lg dark:border-white/10 dark:bg-slate-950/80 dark:hover:border-primary/50">
+          <div key={skill.title} className="skill-card group flex flex-col gap-4 rounded-3xl border border-gray-200/50 bg-white p-6 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-slate-950/80 dark:hover:border-primary/50">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{skill.title}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{skill.description}</p>
           </div>

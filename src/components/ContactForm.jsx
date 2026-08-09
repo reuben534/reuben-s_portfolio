@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ContactForm({ handleFormSubmit, isSending }) {
   return (
-    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" className="mt-12 space-y-6" onSubmit={handleFormSubmit}>
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" className="mx-auto max-w-xl mt-12 space-y-6" onSubmit={handleFormSubmit}>
       <input type="hidden" name="access_key" value="66c48468-fd9d-43fa-be31-6c8c0de4c60a" />
       <div>
         <label className="mb-2 block text-sm font-medium text-black/80 dark:text-white/80" htmlFor="name">Name</label>
