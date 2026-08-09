@@ -6,6 +6,7 @@ import SectionSummary from './components/SectionSummary';
 import SkillsPanel from './components/SkillsPanel';
 import ProjectGrid from './components/ProjectGrid';
 import ContactForm from './components/ContactForm';
+import CVSection from './components/CVSection';
 import Toast from './components/Toast';
 import { educationTimeline, skillsSections, technologies, projects } from './data/portfolioData';
 
@@ -92,6 +93,7 @@ function App() {
                 <ProjectGrid projects={projects} />
               </SectionSummary>
             </section>
+            <CVSection />
             <section className="mt-16 scroll-mt-20 section-surface py-16" id="contact">
               <div className="mx-auto max-w-2xl px-4 py-10 sm:px-6 lg:px-8">
                 <div className="mb-10 text-center">
