@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
+import ExperienceTimeline from './components/ExperienceTimeline';
 import SectionSummary from './components/SectionSummary';
 import SkillsPanel from './components/SkillsPanel';
 import ProjectGrid from './components/ProjectGrid';
 import ContactForm from './components/ContactForm';
 import CVSection from './components/CVSection';
 import Toast from './components/Toast';
-import { educationTimeline, skillsSections, technologies, projects } from './data/portfolioData';
+import { educationTimeline, experienceTimeline, skillsSections, technologies, projects } from './data/portfolioData';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -75,6 +76,15 @@ function App() {
           <Hero />
           <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
             <AboutSection educationTimeline={educationTimeline} />
+            <section className="mt-16 scroll-mt-20 section-surface py-16" id="experience">
+              <SectionSummary
+                title="Experience"
+                subtitle="My professional journey"
+                description="From control room operations to full-stack development. Leveraging my background to build innovative solutions."
+              >
+                <ExperienceTimeline experienceTimeline={experienceTimeline} />
+              </SectionSummary>
+            </section>
             <section className="mt-16 scroll-mt-20 section-surface py-16" id="skills">
               <SectionSummary
                 title="Skills"

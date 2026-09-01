@@ -22,15 +22,17 @@ export const experienceTimeline = [
     title: 'Freelance Developer',
     status: 'Current',
     period: '2020 - Present',
-    level: 'Independent',
-    institution: 'Self-Employed',
+    description: 'Full-stack development specializing in MERN stack and ASP.NET Core applications. Building dynamic web solutions with focus on performance, security, and user experience.',
+    level: 'Self-Employed',
+    institution: 'Freelance',
   },
   {
     title: 'Control Room Operator',
-    status: 'Previous Role',
+    status: 'Completed',
     period: '2020 - 2024',
+    description: 'Core operational role managing critical systems and workflows. Transitioned knowledge into software development focusing on process automation and system optimization.',
     level: 'Professional',
-    institution: 'Core Experience',
+    institution: 'Industry Experience',
   },
 ];
 
