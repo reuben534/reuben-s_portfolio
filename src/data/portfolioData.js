@@ -17,6 +17,23 @@ export const educationTimeline = [
   },
 ];
 
+export const experienceTimeline = [
+  {
+    title: 'Freelance Developer',
+    status: 'Current',
+    period: '2020 - Present',
+    level: 'Independent',
+    institution: 'Self-Employed',
+  },
+  {
+    title: 'Control Room Operator',
+    status: 'Previous Role',
+    period: '2020 - 2024',
+    level: 'Professional',
+    institution: 'Core Experience',
+  },
+];
+
 export const projects = [
   {
     title: 'International Payment Portal',
